@@ -20,6 +20,7 @@
     <x-Navbar />
 
     @include('partials.hero-section')
+    <x-ScrollBanner />
 
 
     @yield('content')

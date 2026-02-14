@@ -16,6 +16,36 @@
     --font-poppins: 'Poppins', sans-serif;
 }
 
+.content {
+    width: 100%;
+    overflow: hidden;
+    background: #f3f4f6;
+    padding: 20px 0;
+}
+
+.track {
+    display: flex;
+    width: max-content;
+    animation: scrollInfinite 25s linear infinite;
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 60px;
+}
+
+@keyframes scrollInfinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+
 @layer utilities {
     .poppins-thin {
         font-family: "Poppins", sans-serif;
