@@ -11,7 +11,7 @@
     </div>
 
 
-    <div class="sticky top-0 bg-white w-full shadow-md">
+    <div class="sticky top-0 z-10 bg-white w-full shadow-md">
         <div class="flex h-25 justify-between items-center w-full px-17.5">
             {{-- logo --}}
             <div class="flex w-auto justify-start items-center">
