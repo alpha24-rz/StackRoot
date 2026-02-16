@@ -13,7 +13,51 @@
     
     --font-serif: 'Playfair Display', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 
-    --font-poppins: 'Poppins', sans-serif;
+    --font-poppins: Poppins;
+}
+
+
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  ::-webkit-scrollbar {
+  display: none;
+}
+}
+
+.text-judul-1 {
+    font-family: var(--font-poppins);
+    font-size: 28px;
+    font-weight: 600;
+    color: #111827;
+}
+.text-judul-2 {
+    font-family: var(--font-poppins);
+    font-size: 24px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.text-body {
+    font-family: var(--font-poppins);
+    font-size: 16px;
+    color: #4b5563;
+}
+
+/* Media query untuk layar dengan lebar maksimum 1024px */
+@media screen and (max-width: 1024px) {
+    .text-judul {
+        font-size: 24px;
+    }
+
 }
 
 .content {
@@ -45,119 +89,6 @@
 }
 
 
-
-@layer utilities {
-    .poppins-thin {
-        font-family: "Poppins", sans-serif;
-        font-weight: 100;
-        font-style: normal;
-    }
-
-    .poppins-extralight {
-        font-family: "Poppins", sans-serif;
-        font-weight: 200;
-        font-style: normal;
-    }
-
-    .poppins-light {
-        font-family: "Poppins", sans-serif;
-        font-weight: 300;
-        font-style: normal;
-    }
-
-    .poppins-regular {
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-    }
-
-    .poppins-medium {
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-    }
-
-    .poppins-semibold {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-style: normal;
-    }
-
-    .poppins-bold {
-        font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-    }
-
-    .poppins-extrabold {
-        font-family: "Poppins", sans-serif;
-        font-weight: 800;
-        font-style: normal;
-    }
-
-    .poppins-black {
-        font-family: "Poppins", sans-serif;
-        font-weight: 900;
-        font-style: normal;
-    }
-
-    .poppins-thin-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 100;
-        font-style: italic;
-    }
-
-    .poppins-extralight-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 200;
-        font-style: italic;
-    }
-
-    .poppins-light-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 300;
-        font-style: italic;
-    }
-
-    .poppins-regular-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-style: italic;
-    }
-
-    .poppins-medium-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-style: italic;
-    }
-
-    .poppins-semibold-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-style: italic;
-    }
-
-    .poppins-bold-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-style: italic;
-    }
-
-    .poppins-extrabold-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 800;
-        font-style: italic;
-    }
-
-    .poppins-black-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 900;
-        font-style: italic;
-    }
-
-}
-
-
 @layer components {
 
     .nav-link {
@@ -179,3 +110,65 @@
     }
 
 }
+
+/* From Uiverse.io by ArturCodeCraft */ 
+/* <reset-style> ============================ */
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+/* ============================ */
+/* <style for bg> ======== */
+.background {
+  border-radius: 8px;
+  border: 1px solid #1a1a1a;
+  mix-blend-mode: luminosity;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.20);
+  backdrop-filter: blur(15px);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* <style for menu__icon> ======== */
+.menu__icon {
+  width: 31px;
+  height: 31px;
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__icon span {
+  width: 100%;
+  height: 0.125rem;
+  border-radius: 0.125rem;
+  background-color: rgb(0, 122, 255);
+  box-shadow: 0 .5px 2px 0 hsla(0, 0%, 0%, .2);
+  transition: transform .4s, background-color .4s, opacity .4s;
+}
+
+.menu__icon:hover span:nth-child(1) {
+  background-color: rgb(255, 59, 48);
+  transform: translateY(5px) rotate(-35deg);
+}
+
+.menu__icon:hover span:nth-child(2) {
+  transform: translate(-50%);
+  opacity: 0;
+}
+
+.menu__icon:hover span:nth-child(3) {
+  background-color: rgb(255, 59, 48);
+  transform: translateY(-5px) rotate(35deg);
+}
+
+
